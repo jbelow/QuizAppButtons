@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:QuizAppButtons"
+             x:Class="QuizAppButtons.MainPage">
+
+    <ContentPage.Resources>
+
+        <LayoutOptions x:Key="horzOptions"
+                           Alignment="Center" />
+
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label x:Name="theLabel" FontSize="24" HorizontalOptions="{StaticResource horzOptions}" Text="Press Start to begin the quiz"
+            VerticalOptions="CenterAndExpand" />
+
+        <Image x:Name="theImage" Source="start" Aspect="AspectFit"
+                    HorizontalOptions="Center"/>
+        <Button Text="Start" HorizontalOptions="{StaticResource horzOptions}" x:Name="btnStart" Clicked="btnStartClicked"/>
+        <Button Text="True" IsVisible="false" HorizontalOptions="{StaticResource horzOptions}" x:Name="btnTrue" Clicked="btnTrueClicked"/>
+        <Button Text="False" IsVisible="false" HorizontalOptions="{StaticResource horzOptions}" x:Name="btnFalse" Clicked="btnFalseClicked"/>
+    </StackLayout>
+
+</ContentPage>
